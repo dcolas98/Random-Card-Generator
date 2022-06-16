@@ -29,13 +29,16 @@ body {
   bottom: -142px;
   right: 5px;
   font-size: 85px;
+  transform: rotate(180deg);
 }
 
 span.number {
   font-size: 200px;
 }
 
-/* position: absolute;
-    top: -153px;
-    left: 0px;
-    font-size: 85px; */
+.color-red {
+  color: red;
+}
+.color-black {
+  color: black;
+}

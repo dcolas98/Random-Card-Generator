@@ -13,7 +13,7 @@ import "./assets/img/4geeks.ico";
 //   }, 10000);
 // };
 
-const suit = ["\u2665", "\u2666", "\u2663", "\u2668"];
+const suit = ["&clubs;", "&diams;", "&spades;", "&hearts;"];
 const number = [
   "1",
   "2",
@@ -35,8 +35,18 @@ function randomIndex(arr) {
   const index = Math.floor(Math.random() * arr.length);
   return index;
 }
-console.log(number[randomIndex(number)]);
-console.log(suit[randomIndex(suit)]);
 
 const numberValue = number[randomIndex(number)];
 const suitValue = suit[randomIndex(suit)];
+const topSuit = document.querySelector(".top-suit");
+const bottomSuit = document.querySelector(".bottom-suit");
+if (suitValue == "&hearts;" || suitValue == "&diams;") {
+  topSuit.style.color = "red";
+  bottomSuit.style.color = "red";
+}
+
+window.onload = () => {
+  topSuit.innerHTML = suitValue;
+  bottomSuit.innerHTML = suitValue;
+  number.innerHTML = numberValue;
+};
