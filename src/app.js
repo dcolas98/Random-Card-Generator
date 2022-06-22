@@ -15,7 +15,7 @@ import "./assets/img/4geeks.ico";
 
 const suit = ["&clubs;", "&diams;", "&spades;", "&hearts;"];
 const number = [
-  "1",
+  "A",
   "2",
   "3",
   "4",
@@ -25,7 +25,6 @@ const number = [
   "8",
   "9",
   "10",
-  "A",
   "J",
   "Q",
   "K"
@@ -40,6 +39,8 @@ const numberValue = number[randomIndex(number)];
 const suitValue = suit[randomIndex(suit)];
 const topSuit = document.querySelector(".top-suit");
 const bottomSuit = document.querySelector(".bottom-suit");
+const numSpace = document.querySelector(".number");
+
 if (suitValue == "&hearts;" || suitValue == "&diams;") {
   topSuit.style.color = "red";
   bottomSuit.style.color = "red";
@@ -48,5 +49,5 @@ if (suitValue == "&hearts;" || suitValue == "&diams;") {
 window.onload = () => {
   topSuit.innerHTML = suitValue;
   bottomSuit.innerHTML = suitValue;
-  number.innerHTML = numberValue;
+  numSpace.innerHTML = numberValue;
 };
